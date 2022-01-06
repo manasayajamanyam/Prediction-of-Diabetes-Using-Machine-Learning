@@ -1,0 +1,146 @@
+{% load static %}
+<html>
+<head>
+<style>
+form {
+    border: 2px solid #f1f1f1;
+  }
+
+.a
+{
+  color : white;
+  font-size : 15px;
+  text-decoration : none;
+}
+  input[type=text],
+  input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  button {
+    background-color:black;
+    color:white;
+    margin: 0px 0px;
+    font-size:20px ;
+    font-family:timesnewroman ;
+    height:80px;
+    border:none;
+    cursor: pointer;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  button:hover {
+    opacity: 1;
+      color: darkgray;
+  }
+
+
+  .container {
+    padding: 30px;
+  }
+
+
+
+  @media screen and (max-width: 300px) {
+    span.new {
+      display: block;
+      float: none;
+    }
+  }
+  body{
+      background:url({% static 'images/6.jfif' %});
+
+       background-size:cover;
+
+    }
+x
+{
+  color : white;
+  font-size : 20px;
+  text-decoration : none;
+}
+x:hover
+{
+  color : yellow;
+  font-size : 24px;
+}
+.xx
+{
+  text-align : justify;
+font-size : 20px;
+line-height : 30px;
+text-indent : 0px;
+padding : 20px;
+
+opacity : 0.9;
+
+}
+.yy
+{
+  text-align : center;
+font-size : 18px;
+line-height : 10px;
+text-indent : 10px;
+padding : 0px;
+//opacity : 0.7;
+
+}
+
+
+
+</style>
+</head>
+<body>
+<table><tr height="20px"></tr></table>
+<table border='0' width="100%" style="background-color:red;text-align:center;" cellspacing="0" cellpadding="0"  align="center">
+<tr height="10px">
+<td width="60%"><form method="get" action="#" style="font-size: 0px">
+    <button type="submit">Diabetes Prediction</button>
+</form></td>
+<td width="8%"><form method="get" action="login" style="font-size: 0px">
+    <button type="submit">Login</button>
+</form></td>
+<td width="8%"><form method="get" action="register" style="font-size: 0px" >
+    <button type="submit">Register</button>
+</form></td>
+<!--<td width="10%"><form method="get" action="about/" style="font-size: 0px">
+    <button type="submit">About Us</button>
+</form></td>
+<td width="10%"><form method="get" action="Contact/" style="font-size: 0px">
+    <button type="submit">Contact Us</button>-->
+</form></td>
+</tr>
+</table>
+<table border='0' width="100%" cellspacing="0" cellpadding="0"  align="center"  bgcolor="#f1f1f1" >
+<tr height="250px">
+  <td width=3%></td>
+<td><p class="">
+</p></td>
+    <td width="30%"><img src="{% static 'niki.jpg' %}" height="200px" width="100%"></td>
+    <td width="30%"><img src="{% static 'lucky.jpg' %}" height="200px" width="100%"></td>
+    <td width="30%"><img src="{% static 'man.jpg' %}" height="200px" width="100%"></td>
+<td width=3%></td>
+</table>
+<h1 align="center">Welcome to Diabetes Prediction System!!!</h1>
+<table border='0' width="100%" cellspacing="0" cellpadding="0"  align="center" bgcolor="#9370db" >
+<tr height="400px">
+  <td width="30%" align="center"><img src="{% static 'ym.jpg' %}" height="200px" width="100%"></td>
+  <td><p class="xx"><b>
+Diabetes is a common chronic disease and poses a great threat to human health. Here is the prediction System for diabetes . This analysis will help the patients to check whether the patient is affected with the diabetes or not through our online website of Diabetes Prediction.</b></p></td>
+<br>
+    <td width="30%" align="center"><img src="{% static 'ym.jpg' %}" height="200px" width="100%"></td>
+    <td width=3%></td>
+</tr>
+
+</table>
+</body>
+{% block content %}  {% endblock %}
+</html>
+
+

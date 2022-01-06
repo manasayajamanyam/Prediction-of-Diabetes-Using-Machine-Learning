@@ -1,0 +1,145 @@
+{% load static %}
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+<style>
+
+form {
+    border: 2px solid #f1f1f1;
+    background-color:#e3fa87a6;
+background-size:cover;
+  }
+
+
+  input[type=text],
+  input[type=password] {
+    size: 20px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  button {
+    background-color:cornflowerblue;
+    color:white;
+    margin: 0px 0px;
+    font-size:20px ;
+    font-family:calibri ;
+    height:50px;
+    border:none;
+    cursor: pointer;
+    width: 100%;
+    box-shadow: none;
+  }
+
+
+
+  button:hover {
+    opacity: 1;
+  }
+
+
+  .container {
+    padding: 30px;
+  }
+
+
+
+  @media screen and (max-width: 300px) {
+    span.new {
+      display: block;
+      float: none;
+    }
+  }
+  body {
+  background-color: lightgray;
+  }
+x
+{
+  color : white;
+  font-size : 20px;
+  text-decoration : none;
+}
+x:hover
+{
+  color : yellow;
+  font-size : 24px;
+}
+.xx
+{
+  text-align : justify;
+font-size : 18px;
+line-height : 30px;
+text-indent : 0px;
+padding : 20px;
+
+opacity : 0.9;
+
+}
+.yy
+{
+  text-align : center;
+font-size : 18px;
+line-height : 10px;
+text-indent : 10px;
+padding : 0px;
+//opacity : 0.7;
+
+}
+label
+{
+color:Black;
+}
+
+h2 {
+   color: black;
+}
+
+</style>
+</head>
+<body><table>
+  <tr height="10px"></tr></table>
+</tr></table>
+<h2><P align="left">Enter the details of the patient..</P></h2>
+<table>
+  <tr height="20px"></tr></table>
+ <form action="predict" method="post">
+{% csrf_token %}
+
+
+    <label><b>Pregnancies</b></label>
+    <input type="text" placeholder="Pregnancies" name="pregnancies" required>
+
+    <label><b>Glucose</b></label>
+    <input type="text" placeholder="Glucose" name="glucose" required>
+
+    <label><b>BloodPressure</b></label>
+    <input type="text" placeholder="BloodPressure" name="bloodpressure" required>
+
+    <label><b>SkinThickness</b></label>
+    <input type="text" placeholder="SkinThickness" name="skinthickness" required>
+
+    <label><b>Insulin</b></label>
+    <input type="text" placeholder="Insulin" name="insulin" required>
+
+    <label><b>BMI</b></label>
+    <input type="text" placeholder="BMI" name="bmi" required>
+
+    <label><b>DiabetesPedigreeFunction</b></label>
+    <input type="text" placeholder="DiabetesPedigreeFunction" name="diabetespedigreefunction" required>
+
+    <label><b>Age</b></label>
+    <input type="text" placeholder="Age" name="age" required>
+
+
+
+
+
+    <button type="submit">Predict</button>
+  </div>
+
+</form>
+</body>
+</html>

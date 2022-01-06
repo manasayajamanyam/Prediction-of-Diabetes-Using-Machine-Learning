@@ -1,0 +1,223 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title> Diabetes Prediction</title>
+<style>
+body
+{
+   margin:0;
+   padding:0;
+   background-image:url({% static ' ' %});background-size:cover;
+    background-color: lightgoldenrodyellow;
+}
+.box
+{
+   position:absolute;
+   top:50%;
+   left:50%;
+   transform:translate(-50%,-50%);
+   width:800px;
+   padding:40px;
+   background:gray;
+   box-sizing:border-box;
+   box-shadow:0 15px 25px rgba(0,0,0,.5);
+   border-radius:10px;
+}
+.box h1
+{
+     margin:0 0 30px;
+     padding:0;
+     color:#fff;
+     text-align:center;
+}
+.box .inputbox
+{
+   position:relative;
+}
+.box .inputbox input
+{
+   width:100%;
+   padding:10px 0;
+   font-size:16px;
+   color:#fff;
+   margin-bottom:30px;
+   border:none;
+   border-bottom:1px solid #fff;
+   outline:none;
+   background:transparent;
+}
+.box .inputbox label
+{
+   position:absolute;
+   top:0;
+   left:0;
+   padding:10px 0;
+   font-size:12px;
+   color:#fff;
+   pointer-events:none;
+   transition:.5s;
+}
+.box .inputbox input:focus ~ label,
+.box .inputbox input:valid ~ label
+{
+  top:-18px;
+  left:0;
+  color:#03a9f4;
+  font-size:12px;
+}
+.box input[type="submit"]
+{
+  background:transparent;
+  border:none;
+  outline:none;
+  color:#fff;
+  background:#03a9f4;
+  padding:10px 20px;
+  cursor:pointer;
+  border-radius:5px;
+}
+h1 {
+   color: black;
+}
+</style>
+</head>
+
+<body>
+
+<h1 align="center">Hello {{user.first_name}}</h1>
+<h3 align="center">If the output is 1 then the patient is affected by the diabetes else not affected by the diabetes.</h3>
+<style>
+<div>
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid purple;
+}
+
+thead th:nth-child(1) {
+  width: 10%;
+}
+
+thead th:nth-child(2) {
+  width: 20%;
+}
+
+thead th:nth-child(3) {
+  width: 15%;
+}
+
+thead th:nth-child(4) {
+  width: 35%;
+}
+
+th, td {
+  padding: 20px;
+}
+html {
+  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+}
+
+thead th, tfoot th {
+  font-family: 'Rock Salt', cursive;
+}
+
+th {
+  letter-spacing: 2px;
+}
+
+td {
+  letter-spacing: 1px;
+}
+
+tbody td {
+  text-align: center;
+}
+
+tfoot th {
+  text-align: right;
+}
+thead, tfoot {
+  background: url(leopardskin.jpg);
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+thead th, tfoot th, tfoot td {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+  border: 3px solid purple;
+}
+tbody tr:nth-child(odd) {
+  background-color: #ff33cc;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e495e4;
+}
+
+tbody tr {
+  background-image: url(noise.png);
+}
+    table {
+        alignment: center;
+    background-color: #ff33cc;
+}
+    </style>
+        <table align="center">
+            <thead>
+              <tr>
+                  <th>S.NO</th>
+                  <th>TESTS</th>
+                  <th>VALUE OBTAINED</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Pregnancies</td>
+                <td>{{pregnancies}}</td>
+              </tr>
+             <tr>
+                <td>2</td>
+                <td>Glucose</td>
+                <td>{{glucose}}</td>
+              </tr>
+             <tr>
+                <td>3</td>
+                <td>BloodPressure</td>
+                <td>{{bloodpressure}}</td>
+              </tr>
+             <tr>
+                <td>4</td>
+                <td>SkinThickness</td>
+                <td>{{skinthickness}}</td>
+              </tr>
+            <tr>
+                <td>5</td>
+                <td>Insulin</td>
+                <td>{{insulin}}</td>
+              </tr>
+            <tr>
+                <td>6</td>
+                <td>BMI</td>
+                <td>{{bmi}}</td>
+              </tr>
+            <tr>
+                <td>7</td>
+                <td>DiabetesPedigreeFunction</td>
+                <td>{{diabetespedigreefunction}}</td>
+              </tr>
+            <tr>
+                <td>8</td>
+                <td>Age</td>
+                <td>{{age}}</td>
+              </tr>
+            </tbody>
+          </table>
+</div>
+
+<h1 align="center">The predicted result is {{data}}.</h1>
+<h3><center><a href="/">Log out</a></center></h3>
+</body>
+</html>
